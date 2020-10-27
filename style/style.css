@@ -1,0 +1,2042 @@
+/************************* Index.html Settings *************************/
+
+/*--------------------------------------------------Fonts--------------------------------------------------*/
+
+@font-face {
+    font-family: "AmaticSC-Regular";
+    src: url(../fonts/AmaticSC-Regular.ttf);
+}
+
+@font-face {
+    font-family: "AmaticSC-Bold";
+    src: url(../fonts/AmaticSC-Bold.ttf);
+}
+
+@font-face {
+    font-family: "WorkSans-Light";
+    src: url(../fonts/WorkSans-Light.ttf);
+}
+
+@font-face {
+    font-family: "WorkSans-Regular";
+    src: url(../fonts/WorkSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "WorkSans-Bold";
+    src: url(../fonts/WorkSans-Bold.ttf);
+}
+
+/*--------------------------------------------------Main Settings--------------------------------------------------*/
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #bcbcbc;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    /*Немного сглаживает шрифты*/
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "WorkSans-Bold";
+}
+
+a {
+    text-decoration: none;
+    font-family: "WorkSans-Regular";
+}
+
+button {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+p {
+    margin: 0;
+    font-family: "AmaticSC-Regular";
+}
+
+h1 {
+    color: #fff;
+    font-size: 64px;
+}
+
+h2 {
+    color: #000;
+    font-size: 64px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+h3 {
+    color: #000;
+    font-size: 32px;
+}
+
+h4 {
+    color: #000;
+    font-size: 20px;
+}
+
+h5 {
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn {
+    text-transform: uppercase;
+    background-color: #fc3232;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.65);
+}
+
+.color__red {
+    color: #fc3232;
+}
+
+/*--------------------------------------------------Section Only With 2 Images Settings--------------------------------------------------*/
+
+.container-img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 125px;
+}
+
+.img {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 50%;
+}
+
+
+
+/************************* Adaptive Only With Width *************************/
+
+@media (max-width: 860px) {
+    .container-img{
+        margin-top: 85px;
+    }
+
+    .img{
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .container-img{
+        margin-top: 55px;
+    }
+
+    .img{
+        height: 200px;
+    }
+}
+
+@media (max-width: 360px) {
+    .img{
+        height: 100px;
+    }
+}
+
+/************************* Adaptive Only With Height *************************/
+
+@media (orientation: landscape) and (max-height: 450px){
+    .container-img{
+        flex-direction: column;
+    }
+
+    .img{
+        width: 80%;
+        margin: 5px auto;
+        height: 200px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 320px){
+    .container-img{
+        margin-top: 55px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 280px){
+    .img{
+        height: 150px;
+    }
+}
+
+
+
+/*--------------------------------------------------Header Settings--------------------------------------------------*/
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.header.fixed {
+    position: fixed;
+    background-color: #31344e;
+    height: auto;
+    box-shadow: 0 3px 50px rgba(0, 0, 0, 0.65);
+}
+
+.header.fixed .header__inner {
+    padding: 15px 0;
+    border-bottom: none;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 35px;
+    align-items: center;
+}
+
+.header__logo a {
+    cursor: pointer;
+    color: #fff;
+    font-size: 26px;
+}
+
+/*--------------------------------------------------Nav Settings--------------------------------------------------*/
+
+.nav {
+    display: none;
+    font-size: 16px;
+    font-family: "RalewayBold";
+    text-transform: uppercase;
+}
+
+.nav__link {
+    color: #000;
+    transition: opacity 0.1s linear;
+    margin: 20px 100px 30px 30px;
+    cursor: default;
+}
+
+a.nav__link:hover {
+    color: #fc3232;
+    transition: color 0.2s linear;
+    cursor: pointer;
+}
+
+a.nav__link.active {
+    color: #fc3232;
+}
+
+.nav.active {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 100px;
+    right: 0;
+    background-color: #fff;
+    justify-content: flex-end;
+    border: 2px solid #000;
+    border-right: none;
+}
+
+.nav__close {
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    font-size: 35px;
+    top: 10px;
+    right: 25px;
+}
+
+
+
+/************************* Adaptive Only With Width *************************/
+
+@media (max-width: 768px) {
+    .nav{
+        font-size: 14px;
+    }
+
+    .nav__link{
+        margin: 20px 40px 10px 20px;
+    }
+
+    .nav__close{
+        right: 10px;
+        font-size: 30px;
+    }
+}
+
+
+
+/*--------------------------------------------------Burger Settings--------------------------------------------------*/
+
+.burger {
+    display: block;
+    cursor: pointer;
+    padding: 9px 2px;
+    outline: none;
+}
+
+.burger__item {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    font-size: 0;
+    color: transparent;
+    position: relative;
+}
+
+.burger__item:before,
+.burger__item:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.burger__item:before {
+    top: -8px;
+    width: 30px;
+}
+
+.burger__item:after {
+    bottom: -8px;
+    width: 26px;
+}
+
+/*--------------------------------------------------Intro Settings--------------------------------------------------*/
+
+.intro {
+    background: url("../images/1.jpg") no-repeat center;
+    background-blend-mode: multiply;
+    background-color: #5a5a5a;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.intro__inner {
+    text-align: center;
+    color: #fff;
+}
+
+.intro__title {
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    font-family: "WorkSans-Bold";
+    font-size: 24px;
+    margin-bottom: 55px;
+}
+
+.submit{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit a {
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.submit span {
+    font-size: 16px;
+    margin: 0 25px;
+    font-family: "WorkSans-Bold";
+}
+
+.intro__btn {
+    padding: 15px;
+}
+
+
+
+/************************* Adaptive Only With Width *************************/
+
+@media (max-width: 1140px) {
+    .intro__title{
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__title{
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 590px) {
+    .intro__title{
+        font-size: 38px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
+
+    .submit a{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .intro__title{
+        font-size: 32px;
+    }
+
+    .subtitle{
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 375px){
+    .submit{
+        flex-direction: column;
+    }
+
+    .submit span {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .intro__btn{
+        padding: 12px;
+    }
+}
+
+@media (max-width: 320px){
+    .intro__title{
+        font-size: 30px;
+    }
+
+    .subtitle{
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .submit a{
+        font-size: 12px;
+    }
+
+    .intro__btn{
+        padding: 10px;
+    }
+}
+
+/************************* Adaptive Only With Height *************************/
+
+@media (max-height: 420px){
+    .nav{
+        top: 80px;
+    }
+
+    .nav__link{
+        margin: 20px 35px 10px 20px;
+    }
+
+
+    .nav__close{
+        font-size: 30px;
+        right: 10px;
+    }
+
+    .intro__inner{
+        margin-top: 20px;
+    }
+
+    .intro__title {
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-height: 375px){
+    .nav.active{
+        top: 75px;
+    }
+
+    .nav__link{
+        margin: 13px 25px 10px 15px;
+    }
+}
+
+@media (max-height: 360px){
+    .nav.active{
+        top: 70px;
+    }
+
+    .intro__title {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .submit a{
+        font-size: 14px;
+    }
+
+    .intro__btn{
+        padding: 12px;
+    }
+}
+
+@media (max-height: 320px){
+    .nav.active{
+        top: 65px;
+    }
+
+    .nav__close {
+        right: 5px;
+        font-size: 25px;
+        top: 5px;
+    }
+
+    .nav__link{
+        margin: 13px 25px 10px 15px;
+    }
+
+    .intro__inner{
+        margin-top: 35px;
+    }
+
+    .intro__title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .submit a{
+        font-size: 12px;
+    }
+
+    .intro__btn{
+        padding: 10px;
+    }
+}
+
+@media (max-height: 280px){
+    .nav__link{
+        margin: 9px 25px 9px 15px;
+    }
+
+    .subtitle{
+        margin-bottom: 15px;
+    }
+}
+
+
+
+/*--------------------------------------------------About Settings--------------------------------------------------*/
+
+.about__inner {
+    margin: 0 auto;
+    max-width: 650px;
+    position: relative;
+}
+
+.about__title h2 {
+    margin-bottom: 45px;
+    text-align: left;
+}
+
+.about__timer-title {
+    font-size: 18px;
+    color: #000;
+    text-transform: uppercase;
+    font-family: "AmaticSC-Bold";
+    font-weight: 700;
+    letter-spacing: 0.25em;
+}
+
+.timer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.timer__item {
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 20px 30px 0;
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    height: 90px;
+    padding-top: 15px;
+}
+
+.timer__item:last-child {
+    margin-right: 0;
+}
+
+.timer__dig {
+    color: #fc3232;
+    font-size: 30px;
+    font-family: "WorkSans-Light";
+}
+
+.timer__title {
+    font-size: 16px;
+}
+
+.about__text p {
+    font-size: 18px;
+    margin-top: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.1em;
+}
+
+.get__ticket {
+    margin-top: 55px;
+}
+
+.about__btn {
+    padding: 10px 25px;
+}
+
+
+
+/************************* Adaptive Only With Width *************************/
+
+@media (max-width: 768px) {
+    .about__title h2 {
+        margin: 45px 0;
+        font-size: 48px;
+    }
+
+    .timer__item{
+        margin-bottom: 10px;
+    }
+
+    .get__ticket{
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 560px){
+    .about__title h2 {
+        margin: 30px 0;
+        font-size: 38px;
+    }
+
+    .timer{
+        justify-content: center;
+    }
+
+    .timer__item{
+        margin-left: 20px;
+    }
+
+    .timer__item:last-child{
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 420px){
+    .about__title h2 {
+        font-size: 32px;
+    }
+
+    .about__text p{
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .get__ticket{
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about__btn{
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 320px){
+    .about__title h2 {
+        margin: 25px 0;
+        font-size: 30px;
+    }
+
+    .about__btn{
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+
+
+/*--------------------------------------------------Speakers Settings--------------------------------------------------*/
+
+.speakers__persons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    justify-content: space-between;
+}
+
+.person__item {
+    margin-top: 35px;
+    flex-basis: 33%;
+}
+
+.person__item img {
+    max-width: 350px;
+    max-height: 350px;
+    transition: all 0.3s ease;
+}
+
+.person__item img:hover{
+    transform: translateY(-15px);
+}
+
+.person__item h3 {
+    margin: 10px 0;
+}
+
+.person__item p {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+}
+
+
+
+/************************* Adaptive Only With Width *************************/
+
+@media (max-width: 1140px) {
+    .speakers__persons{
+        margin-top: 60px;
+    }
+
+    .person__item{
+        flex-basis: 50%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .speakers__title h2 {
+        margin: 45px 0;
+        font-size: 48px;
+    }
+
+    .person__item{
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 560px){
+    .speakers__persons{
+        margin-top: 30px;
+    }
+
+    .speakers__title h2 {
+        margin: 30px 0;
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 420px){
+    .speakers__persons{
+        margin-top: 0;
+        justify-content: center;
+    }
+
+    .speakers__title h2 {
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+
+    .person__item img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .person__item h3{
+        font-size: 26px;
+    }
+
+    .person__item p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px){
+    .person__item img {
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    .person__item h3{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 320px){
+    .speakers__title h2 {
+        margin-top: 25px;
+        font-size: 30px;
+    }
+}
+
+/************************* Adaptive Only With Height *************************/
+
+@media (orientation: landscape) and (max-height: 360px){
+    .person__item img {
+        max-width: 250px;
+        max-height: 250px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 280px){
+    .person__item img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .person__item h3{
+        font-size: 20px;
+    }
+
+    .person__item p{
+        font-size: 12px;
+    }
+}
+
+
+
+/*--------------------------------------------------Why Us Settings--------------------------------------------------*/
+
+.services {
+    margin-top: 80px;
+    margin-bottom: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service__item {
+    text-align: center;
+    flex-basis: 30%;
+}
+
+.service__icon {
+    font-size: 72px;
+    color: #fc3232;
+    margin-bottom: 20px;
+}
+
+.service__title h4 {
+    font-family: "WorkSans-Light";
+    margin-bottom: 10px;
+}
+
+.service__text {
+    font-size: 16px;
+    letter-spacing: 0.01em;
+}
+
+
+
+/************************* Adaptive Only With Width *************************/
+
+@media (max-width: 768px) {
+    .why__us-title h2 {
+        margin: 45px 0;
+        font-size: 48px;
+    }
+
+    .services{
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
+
+    .service__item{
+        flex-basis: 45%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 560px){
+    .why__us-title  h2 {
+        margin: 30px 0;
+        font-size: 38px;
+    }
+
+    .services{
+        margin-top: 0;
+        margin-bottom: 35px;
+    }
+
+    .service__item{
+        flex-basis: 100%;
+    }
+
+    .service__icon{
+        margin-bottom: 5px;
+    }
+}
+
+/************************* Adaptive Only With Height *************************/
+
+@media (orientation: landscape) and (max-height: 360px){
+    .services{
+        margin-bottom: 35px;
+    }
+}
+
+
+
+/*--------------------------------------------------Sponsors Settings--------------------------------------------------*/
+
+.sponsors__inner {
+    margin-bottom: 200px;
+}
+
+.sponsors__imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.sponsor {
+    flex-basis: 33%;
+    margin: 0 auto;
+}
+
+.your__company {
+    border: 1px solid #bcbcbc;
+}
+
+.your__company-content {
+    width: 33%;
+    margin: 0 auto;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.your__company-title h3 {
+    font-family: "WorkSans-Light";
+    margin-bottom: 10px;
+}
+
+.your__company-text {
+    font-size: 16px;
+    letter-spacing: 0.01em;
+}
+
+.your__company-btn {
+    padding: 10px 20px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    text-transform: none;
+}
+
+
+
+/************************* Adaptive Only With Width *************************/
+
+@media (max-width: 768px) {
+    .sponsors__inner{
+        margin-bottom: 100px;
+    }
+
+    .sponsors__title h2 {
+        margin: 45px 0;
+        font-size: 48px;
+    }
+
+    .sponsor img{
+        height: 200px;
+    }
+
+    .your__company-content{
+        width: 60%;
+    }
+}
+
+@media (max-width: 560px){
+    .sponsors__title  h2 {
+        margin: 30px 0;
+        font-size: 38px;
+    }
+
+    .sponsors__imgs{
+        margin: 0;
+    }
+
+    .your__company-content{
+        width: 80%;
+        padding: 15px 0;
+    }
+
+    .your__company-title h3{
+        font-size: 28px;
+    }
+
+    .your__company-text{
+        font-size: 14px;
+    }
+
+    .your__company-btn{
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 420px){
+    .sponsors__inner{
+        margin-bottom: 60px;
+    }
+
+    .sponsors__title h2 {
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+
+    .sponsor img{
+        height: 150px;
+    }
+
+    .your__company-content{
+        width: 90%;
+    }
+
+    .your__company-title h3{
+        font-size: 23px;
+    }
+
+    .your__company-btn{
+        margin-top: 15px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px){
+    .sponsors__inner{
+        margin-bottom: 30px;
+    }
+
+    .sponsors__title h2 {
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .sponsor img{
+        height: 120px;
+    }
+
+    .your__company-title h3{
+        font-size: 21px;
+    }
+
+    .your__company-text{
+        font-size: 12px;
+    }
+
+    .your__company-btn{
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 280px){
+    .your__company-title h3{
+        font-size: 19px;
+    }
+
+    .your__company-text{
+        font-size: 11px;
+    }
+
+    .your__company-btn{
+        padding: 6px 10px;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+}
+
+/************************* Adaptive Only With Height *************************/
+
+@media (orientation: landscape) and (max-height: 580px){
+    .your__company-content {
+        width: 90%;
+    }
+
+    .your__company-title h3{
+        font-size: 30px;
+    }
+
+    .your__company-text{
+        font-size: 14px;
+    }
+
+    .your__company-btn {
+        padding: 8px 15px;
+        margin-top: 15px;
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+}
+
+
+
+/*--------------------------------------------------Slider Settings--------------------------------------------------*/
+
+.slider {
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.slider__item{
+    width: 85%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider__item-content{
+    width: 85%;
+    margin-left: auto;
+}
+
+.slider__item-img img {
+    max-width: 355px;
+    max-height: 235px;
+}
+
+.slider__item-info {
+    margin: 20px 0;
+}
+
+/*.slider__item-info*/ .title h4 {
+    font-family: "WorkSans-Light";
+}
+
+.slider__item-info span {
+    font-family: "WorkSans-Regular";
+}
+
+/*.slider__item-text*/ .text {
+    font-size: 16px;
+    letter-spacing: 0.01em;
+}
+
+
+
+/************************* Adaptive Only With Height *************************/
+
+@media (max-width: 1240px){
+    .slider__item-text{
+        width: 85%;
+    }
+}
+
+
+
+/*--------------------------------------------------Conference Info Settings--------------------------------------------------*/
+
+.conference__info{
+    background-color: #000;
+}
+
+.conference__info-items{
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px 0 35px 0;
+}
+
+.conference__info-item{
+    flex-basis: 33%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.conference__info-icon{
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.conference__info-title h5{
+    font-family: "WorkSans-Light";
+    margin-bottom: 25px;
+}
+
+.conference__info-text{
+    font-size: 16px;
+    line-height: 0.01em;
+}
+
+
+
+/************************* Adaptive Only With Height *************************/
+
+@media (max-width: 450px) {
+    .conference__info-item{
+        flex-basis: 50%;
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 320px) {
+    .conference__info-item{
+        flex-basis: 100%;
+    }
+
+    .conference__info-item:first-child{
+        margin-top: 15px;
+    }
+}
+
+
+
+/*--------------------------------------------------Events Settings--------------------------------------------------*/
+
+/************************* Adaptive Only With Width *************************/
+
+@media (max-width: 1024px) {
+    .slider{
+        margin: 50px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .event__title h2 {
+        margin: 45px 0;
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 560px){
+    .event__title h2{
+        margin: 30px 0;
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 420px){
+    .slider{
+        margin: 25px 0;
+    }
+
+    .event__title h2{
+        font-size: 32px;
+    }
+}
+
+
+/************************* Adaptive Only With Height *************************/
+
+@media (orientation: landscape) and (max-height: 580px){
+    .event__title h2{
+        font-size: 30px;
+    }
+}
+
+
+/*--------------------------------------------------Footer Settings--------------------------------------------------*/
+
+.footer{
+    background: url("../images/1.jpg") no-repeat bottom;
+    background-blend-mode: multiply;
+    background-color: #5a5a5a;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 510px;
+}
+
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    position: relative;
+}
+
+.footer__about{
+    flex: 1;
+}
+
+.footer__about-title h5{
+    font-family: "WorkSans-Light";
+    margin-bottom: 25px;
+}
+
+.footer__about-text{
+    margin-bottom: 25px;
+}
+
+.footer__about-btn{
+    padding: 10px 25px;
+    border-radius: 25px;
+}
+
+.footer__menu{
+    flex: 2;
+}
+
+.footer__menu-title h5{
+    font-family: "WorkSans-Light";
+    margin-bottom: 25px;
+}
+
+.footer__nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer__nav-left,
+.footer__nav-right{
+    display: flex;
+    flex-direction: column;
+}
+
+a.footer__nav-link{
+    color: #8b8b8b;
+    display: inline;
+    margin-bottom: 25px;
+}
+
+.footer__nav-link:hover{
+    color: #fff;
+    transition: color 0.2s linear;
+}
+
+.socials{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.socials__title h5{
+    font-family: "WorkSans-Light";
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.social__icons{
+    display: flex;
+}
+
+.socials__icon{
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.socials__icon:last-child{
+    margin-right: 0;
+}
+
+.socials__icon:hover{
+    color: #fff;
+    transition: color 0.2s linear;
+}
+
+.copyright{
+    position: absolute;
+    bottom: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.copyright p{
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.copyright a{
+    color: #8b8b8b;
+    font-family: "AmaticSC-Bold";
+}
+
+.copyright a:hover{
+    color: #fff;
+    transition: color 0.2s linear;
+}
+
+
+
+/************************* Adaptive Only With Width *************************/
+
+@media (max-width: 1200px) {
+    .footer__menu-title h5{
+        text-align: center;
+    }
+
+    .footer__nav{
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer__about,
+    .footer__menu,
+    .socials{
+        flex-basis: 50%;
+    }
+
+    .socials{
+        align-items: center;
+    }
+
+    .copyright{
+        bottom: -30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__about-text {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .footer__about-btn {
+        padding: 8px 15px;
+        border-radius: 25px;
+        font-size: 14px;
+    }
+
+    .footer__nav{
+        font-size: 14px;
+    }
+
+    .copyright p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 620px) {
+    .footer{
+        height: 700px;
+    }
+    .footer__about,
+    .footer__menu,
+    .socials{
+        flex-basis: 100%;
+    }
+
+    .footer__about{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .footer__about-title h5{
+        margin-bottom: 20px;
+    }
+
+    .footer__menu{
+        margin-bottom: 20px;
+    }
+
+    .copyright{
+        bottom: -20%;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer {
+        height: 600px;
+    }
+
+    .footer__inner{
+        padding-top: 30px;
+    }
+
+    .footer__about {
+        margin-bottom: 30px;
+    }
+
+    .footer__about-text {
+        font-size: 12px;
+    }
+
+    .footer__about-btn {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    .footer__menu {
+        margin-bottom: 10px;
+    }
+
+    .copyright p {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+/************************* Venue.html Settings *************************/
+
+/*--------------------------------------------------About Settings--------------------------------------------------*/
+
+.about__van{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-top: 100px;
+}
+
+.about__left{
+    flex-basis: 60%
+}
+
+.about__left img{
+    max-width: 540px;
+    max-height: 530px;
+}
+
+.about__right{
+    flex-basis: 40%
+}
+
+.about__van-title h2{
+    margin-top: 0;
+}
+
+/*--------------------------------------------------Section Only With 2 Images Settings--------------------------------------------------*/
+
+.container-img__second{
+    margin-top: 0;
+}
+
+
+
+/************************* Adaptive Only With Width *************************/
+
+@media (max-width: 1015px) {
+    .about__van{
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .about__van-title h2{
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .about__left,
+    .about__right{
+        flex-basis: 100%;
+    }
+
+    .about__left img{
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .about__van{
+        margin-top: 50px;
+    }
+
+    .about__left img{
+        max-width: 430px;
+        max-height: 420px;
+    }
+
+    .about__van-title h2{
+        margin: 25px 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .about__left img{
+        max-width: 330px;
+        max-height: 320px;
+    }
+}
+
+@media (max-width: 420px) {
+    .about__left img{
+        max-width: 230px;
+        max-height: 220px;
+    }
+}
+
+@media (max-width: 320px) {
+    .about__left img{
+        max-width: 180px;
+        max-height: 170px;
+    }
+}
+
+
+
+/************************* Adaptive Only With Height *************************/
+
+@media (orientation: landscape) and (max-height: 450px){
+    .about__left img{
+        max-width: 330px;
+        max-height: 320px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 360px){
+    .about__left img{
+        max-width: 230px;
+        max-height: 220px;
+    }
+
+    .about__van-title h2{
+        font-size: 32px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 280px){
+    .about__left img{
+        max-width: 180px;
+        max-height: 170px;
+    }
+}
+
+
+
+
+
+/************************* About.html Settings *************************/
+
+/*--------------------------------------------------Intro Settings--------------------------------------------------*/
+
+.intro-about{
+    background: url("../images/slider/3.jpg") no-repeat center;
+    background-blend-mode: multiply;
+    background-color: #5a5a5a;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*--------------------------------------------------About Confe Settings--------------------------------------------------*/
+
+.about__confe{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about__confe-left,
+.about__confe-right{
+    display: flex;
+    margin-top: 100px;
+}
+
+.about__confe-img{
+    flex-basis: 55%;
+}
+
+.about__confe-content{
+    flex-basis: 45%;
+}
+
+.about__confe-img img{
+    max-width: 540px;
+    max-height: 375px;
+}
+
+.about__confe-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 0;
+    align-items: flex-start;
+}
+
+.about__confe-content h2{
+    justify-content: flex-start;
+    margin-top: 0;
+}
+
+
+
+
+/************************* Adaptive Only With Width *************************/
+
+@media (max-width: 1140px) {
+    .about__confe-left,
+    .about__confe-right{
+        flex-direction: column;
+    }
+
+    .about__confe-right p{
+        margin-bottom: 20px;
+    }
+
+    .about__confe-img{
+        text-align: center;
+    }
+
+    .about__confe-content{
+        margin-top: 35px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px){
+    .about__confe-left,
+    .about__confe-right{
+        margin-top: 50px;
+    }
+
+    .about__confe-content h2{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 560px){
+    .about__confe-right{
+        margin-top: 0;
+    }
+
+    .about__confe-img img{
+        max-width: 440px;
+        max-height: 275px;
+    }
+}
+
+@media (max-width: 560px){
+    .about__confe-img img{
+        max-width: 340px;
+        max-height: 175px;
+    }
+}
+
+@media (max-width: 320px){
+    .about__confe-img img{
+        max-width: 220px;
+        max-height: 155px;
+    }
+}
+
+
+
+
+
+/************************* Adaptive Only With Height *************************/
+
+@media (orientation: landscape) and (max-height: 450px){
+    .about__confe-img img{
+        max-width: 330px;
+        max-height: 320px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 360px){
+    .about__confe-img img{
+        max-width: 230px;
+        max-height: 220px;
+    }
+
+    .about__confe-content h2{
+        font-size: 32px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 280px){
+    .about__confe-img img{
+        max-width: 180px;
+        max-height: 170px;
+    }
+}
+
+
+
+
+/************************* Contact.html Settings *************************/
+
+/*--------------------------------------------------Contact Settings--------------------------------------------------*/
+
+.contact{
+    background-color: #f8f9fa;
+}
+
+.contact__inner{
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 0 125px 0;
+}
+
+.contact__left{
+    flex-basis: 60%;
+}
+
+.contact__right{
+    flex-basis: 25%;
+}
+
+.form{
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+    padding: 10px 25px 45px 25px;
+}
+
+.form,
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-family: "WorkSans-Bold";
+    color: #000;
+    margin: 15px 0;
+}
+
+.form__input,
+.form__textarea{
+    max-width: 635px;
+    padding: 10px;
+    font-family: "WorkSans-Regular";
+    border-radius: 3px;
+    border: 1px solid #dedede;
+}
+
+.form__textarea{
+    min-height: 135px;
+    max-height: 450px;
+    resize: vertical;
+}
+
+.form__input:hover,
+.form__input:focus,
+.form__textarea:hover,
+.form__textarea:focus,{
+    border-color: #c0301c;
+    outline: none;
+    color: #c0301c;
+}
+
+a.contact__btn{
+    margin-top: 25px;
+    display: inline-block;
+    padding: 10px 20px;
+    max-width: 160px;
+    text-transform: none;
+    font-size: 16px;
+}
+
+.contact__info,
+.more__info{
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+    padding: 20px 15px;
+}
+
+.contact__info{
+    display: flex;
+    flex-direction: column;
+}
+
+.adress,
+.phone,
+.email{
+    margin-top: 20px;
+}
+
+.phone,
+.email{
+    display: flex;
+    flex-direction: column;
+}
+
+.adress p{
+    margin-top: 10px;
+}
+
+.more__info{
+    margin-top: 25px;
+}
+
+.more__info p{
+    margin-top: 25px;
+}
+
+
+
+/************************* Adaptive Only With Width *************************/
+
+@media (max-width: 768px){
+    .contact__inner{
+        flex-direction: column;
+        padding-bottom: 80px;
+    }
+
+    .form__input,
+    .form__textarea{
+        max-width: 666px;
+    }
+
+    .contact__info,
+    .more__info{
+        margin: 25px auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 560px){
+    .contact__inner {
+        padding-bottom: 30px;
+    }
+
+    .form{
+        padding-bottom: 15px;
+    }
+
+    .form__textarea {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 420px){
+    .contact__inner{
+        padding-top: 30px;
+    }
+
+    .contact__right h4{
+        font-size: 18px;
+    }
+
+    .adress,
+    .phone,
+    .email {
+        margin-top: 5px;
+    }
+
+    .phone a,
+    .email a {
+        font-size: 14px;
+    }
+
+    .adress p {
+        font-size: 13px;
+    }
+
+    label{
+        font-size: 14px;
+    }
+
+    .more__info {
+        margin: 15px auto;
+    }
+
+    .more__info p {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    a.contact__btn {
+        margin-top: 15px;
+        padding: 8px 15px;
+        max-width: 128px;
+        font-size: 14px;
+    }
+
+    .form__textarea {
+        min-height: 100px;
+        max-height: 250px;
+    }
+}
+
+
+
+
+
+/************************* Adaptive Only With Height *************************/
+
+@media (orientation: landscape) and (max-height: 450px){
+    .about__confe-img img{
+        max-width: 330px;
+        max-height: 320px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 360px){
+    .about__confe-img img{
+        max-width: 230px;
+        max-height: 220px;
+    }
+
+    .about__confe-content h2{
+        font-size: 32px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 280px){
+    .about__confe-img img{
+        max-width: 180px;
+        max-height: 170px;
+    }
+}
